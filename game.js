@@ -434,13 +434,11 @@ function escolherMontaria(usuario) {
             console.log("- Tempo para descanso: 15 minutos");
             break;
         }
-        // Depois de exibir os atributos da montaria, exibe a opção de finalizar criação
+
         rl.question("\nDeseja finalizar a criação? (s/n): ", (resposta) => {
           if (resposta.toLowerCase() === "s") {
-            // Se o jogador escolher finalizar, chama a função para exibir o resumo de tudo
             exibirResumo(usuario);
           } else {
-            // Se o jogador não escolher finalizar, volta para o início do processo
             cadastrarCaracteristicas(usuario);
           }
         });
